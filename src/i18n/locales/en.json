@@ -1,0 +1,29 @@
+{
+  "brand": "Save our sport",
+  "getStarted": "Our story",
+  "petitions": "Petitions",
+  "contact": "Contact",
+  "press": "In the press",
+  "tagline": "Your app content goes here.",
+  "petitionText": "You can sign two petitions. One to keep the track in Kessel-Lo and restore it sustainably (Jurisdiction: Province of Flemish Brabant) and one to urge the city council of Leuven to provide a new 200m track in or around Leuven (see 'Our story' above to read the justification for this).\nThank you very much for helping us!",
+  "petitionButton1": "Sign petition to keep Kessel-Lo track",
+  "petitionButton2": "Sign petition for new 200m track in Leuven",
+  "petitionUrl1": "https://example.com/petition/kessello",
+  "petitionUrl2": "https://example.com/petition/leuven",
+  "welcome": "Please help us to save our sport and track.",
+  "story": {
+    "title": "Our story",
+    "body1a": "Our beloved track has been badly neglected in recent years and may even disappear in favor of an event meadow (source: interview with Rob on TV). But what exactly is being removed? When people talk about removing the track, it seems like a minor issue, but do we really know what we want to remove?",
+    "body1b": "It is, at least, a place where people young and old try roller-skating or inline skating for the first time. Where couples had their first date, riding hand in hand. You can also find people who want to try something different like ski-rollers, or people with elliptical bikes.",
+    "body1c": "It is a place where you can freely and safely experiment with all kinds of transportation. Without cars or other heavy traffic. But it is more, it was more.",
+    "body1d": "In the 1980s Annie Lambrechts broke various world records; sportswoman of the year 1981 (source: https://en.wikipedia.org/wiki/Annie_Lambrechts). It is therefore part of Groot-Leuven history. It is the place where Bart Swings built the foundation for future successes and dreamed of an Olympic medal.",
+    "body1e": "It is exactly those dreams and sports history that seem threatened to be wiped away. The dreams of our competitive riders are also at stake. For now, they have to go to Tienen to train or try to make the best of public roads, which is far from an ideal solution. If it is even a solution.",
+    "body1f": "It was supposed to be temporary, but it risks becoming permanent. This leaves no perspective, causing many members to drop out or not make the switch to competition. At the very least, we need a place where we can train safely.",
+    "body2a": "But that is not enough. For years, skating races have been held on a smaller 200m track. This means that members of Roll&Skate also train on the same type of track where international races are held.",
+    "body2b": "Skating is a very technical sport. A 200m track has shorter (banked) bends and you can easily maintain speeds of 40km/h. We have a few 200m tracks in Belgium, but not too many. The most famous are Zemst, Tienen and Ostend. Especially the latter is the pride of skating sport in Belgium.",
+    "body2c": "Two years ago, the European championship was organized in Ostend (Zandvoorde) and every year a European race is held there. A highlight for our sport. A track like in Zandvoorde would not be out of place in a Leuven that wants to profile itself as a city for top sport. The city that produced one of the best skaters ever, deserves this.",
+    "body2d": "Bart Swings can be the figurehead for our sport, for a track and for a tournament for years to come. Bart already brings a lot of international talent to Leuven and in this way Leuven can be the cradle of our sport. But unfortunately this is not understood by the city council, for 20 years they have been blind to what our sport can mean, has meant and will mean for our beautiful city. That is a great shame.",
+    "caption": "Annie Lambrechts with her father Jean and sister Josette (source: <a href=\"https://degazetvanhoegaarden.be/in-de-kijker/basis-van-successen-van-annie-lambrechts-lag-in-meldert-wereldrecord-rolschaatsen-40-jaar-geleden/\" target=\"_blank\" rel=\"noopener\">De Gazet van Hoegaarden</a>)",
+    "videoCaption": "European Championship in Zandvoorde (2024)"
+  }
+}

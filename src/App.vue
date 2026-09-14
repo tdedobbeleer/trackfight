@@ -65,45 +65,57 @@ const toggleMenu = () => {
     </BNavbarNav>
   </BNavbar>
 
-  <button
-    type="button"
-    class="mobile-menu-btn d-lg-none"
-    :class="{ 'mobile-navbar-expanded': isExpanded }"
-    @click="toggleMenu"
-    aria-label="Toggle navigation"
-  >
-    <IBiList style="font-size: 1.5rem" />
-  </button>
-  <BCollapse id="nav-offcanvas" is-nav v-model="isExpanded" class="dropdown-menu-mobile">
-    <BNavbarNav class="flex-column p-3">
-      <BNavItem href="#story" class="mb-2 d-flex align-items-center gap-2" @click="isExpanded = false">
-        <ISolarWheelOutline class="nav-icon" /> {{ $t('getStarted') }}
-      </BNavItem>
-      <BNavItem href="#petitions" class="mb-2 d-flex align-items-center gap-2" @click="isExpanded = false">
-        <IBiEnvelope class="nav-icon" /> {{ $t('petitions') }}
-      </BNavItem>
-      <BNavItem href="#press" class="mb-2 d-flex align-items-center gap-2" @click="isExpanded = false">
-        <IBiNewspaper class="nav-icon" /> {{ $t('press') }}
-      </BNavItem>
-      <BNavItem href="#contact" class="mb-2 d-flex align-items-center gap-2" @click="isExpanded = false">
-        <IBiTelephone class="nav-icon" /> {{ $t('contact') }}
-      </BNavItem>
-      <BNavItem class="mb-2">
-        <IBiGlobe class="me-2" />
-        <span class="fw-bold">Languages</span>
-      </BNavItem>
-      <BDropdownItem
-        v-for="loc in availableLocales"
-        :key="loc"
-        :active="locale === loc"
-        active-class="bg-danger text-dark"
-        @click="switchLanguage(loc)"
-        class="mb-2"
-      >
-        {{ loc.toUpperCase() }}
-      </BDropdownItem>
-    </BNavbarNav>
-  </BCollapse>
+  <BNavbar sticky="top" toggleable="lg" class="mobile-navbar d-lg-none" variant="light" type="light">
+    <BNavbarToggle label="Toggle navigation" @click="toggleMenu">
+      <IBiList style="font-size: 1.5rem" />
+    </BNavbarToggle>
+    <BCollapse id="nav-offcanvas" is-nav v-model="isExpanded" class="mobile-nav-collapse">
+      <BNavbarNav class="flex-column p-3">
+        <BNavItem
+          href="#story"
+          class="mb-2 d-flex align-items-center gap-2"
+          @click="isExpanded = false"
+        >
+          <ISolarWheelOutline class="nav-icon" /> {{ $t('getStarted') }}
+        </BNavItem>
+        <BNavItem
+          href="#petitions"
+          class="mb-2 d-flex align-items-center gap-2"
+          @click="isExpanded = false"
+        >
+          <IBiEnvelope class="nav-icon" /> {{ $t('petitions') }}
+        </BNavItem>
+        <BNavItem
+          href="#press"
+          class="mb-2 d-flex align-items-center gap-2"
+          @click="isExpanded = false"
+        >
+          <IBiNewspaper class="nav-icon" /> {{ $t('press') }}
+        </BNavItem>
+        <BNavItem
+          href="#contact"
+          class="mb-2 d-flex align-items-center gap-2"
+          @click="isExpanded = false"
+        >
+          <IBiTelephone class="nav-icon" /> {{ $t('contact') }}
+        </BNavItem>
+        <BNavItem class="mb-2">
+          <IBiGlobe class="me-2" />
+          <span class="fw-bold">Languages</span>
+        </BNavItem>
+        <BDropdownItem
+          v-for="loc in availableLocales"
+          :key="loc"
+          :active="locale === loc"
+          active-class="bg-danger text-dark"
+          @click="switchLanguage(loc)"
+          class="mb-2"
+        >
+          {{ loc.toUpperCase() }}
+        </BDropdownItem>
+      </BNavbarNav>
+    </BCollapse>
+  </BNavbar>
 
   <main>
     <router-view />
@@ -150,22 +162,32 @@ const toggleMenu = () => {
   color: #e84a3d;
 }
 
-.dropdown-menu-mobile {
-  position: fixed;
-  top: 6rem;
-  right: 1rem;
-  min-width: 16rem;
-  max-height: calc(100vh - 8rem);
-  overflow-y: auto;
+.mobile-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
   background: #ffffff;
-  border: 2px solid #e30713;
-  border-radius: 0.75rem;
+  border-bottom: 2px solid #e30713;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1040;
 }
 
-.dropdown-menu-mobile.show {
+.mobile-navbar .navbar-toggler {
+  border: 2px solid #e30713;
+  border-radius: 0.75rem;
+  color: #1d1d1b;
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile-navbar .navbar-toggler:hover,
+.mobile-navbar .navbar-toggler:focus {
   border-color: #ffcc01;
+  color: #e84a3d;
+}
+
+.mobile-nav-collapse {
+  background: #ffffff;
+  border-top: 1px solid #e30713;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .nav-icon {
@@ -175,29 +197,5 @@ const toggleMenu = () => {
   vertical-align: middle;
   font-size: 1.1em;
   line-height: 1;
-}
-
-.mobile-menu-btn {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1040;
-  width: 3rem;
-  height: 3rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #ffffff;
-  color: #1d1d1b;
-  border: 2px solid #e30713;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease-in-out;
-}
-
-.mobile-menu-btn:hover,
-.mobile-navbar-expanded .mobile-menu-btn {
-  color: #e84a3d;
-  border-color: #ffcc01;
 }
 </style>

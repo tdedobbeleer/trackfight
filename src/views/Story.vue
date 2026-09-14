@@ -15,7 +15,7 @@ const showVideo = ref(false)
     <p class="lead story-text">{{ $t('story.body1a') }}</p>
     <p class="lead story-text">{{ $t('story.body1b') }}</p>
     <p class="lead story-text">{{ $t('story.body1c') }}</p>
-    <p class="lead story-text">{{ $t('story.body1d') }}</p>
+    <p class="lead story-text" v-html="$t('story.body1d')"></p>
     <p class="lead story-text">{{ $t('story.body1e') }}</p>
     <p class="lead story-text">{{ $t('story.body1f') }}</p>
     <div class="story-image-wrapper mt-5">
@@ -25,7 +25,12 @@ const showVideo = ref(false)
         width="400"
         height="400"
         class="story-image rounded-circle border border-2"
-        style="border-color: #e30713; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); max-height: 50vh; object-fit: cover;"
+        style="
+          border-color: #e30713;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+          max-height: 50vh;
+          object-fit: cover;
+        "
         loading="lazy"
       />
       <p class="story-caption mt-3 text-muted small" v-html="$t('story.caption')"></p>
@@ -44,12 +49,22 @@ const showVideo = ref(false)
         src="https://www.youtube.com/embed/KNcgla8Oofw?si=_F_t-Zc5yWj_jwQO"
         title="YouTube video player"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+          web-share;
+        "
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
       ></iframe>
     </div>
-    <p class="story-video-caption mt-2 text-muted small text-center">{{ $t('story.videoCaption') }}</p>
+    <p class="story-video-caption mt-2 text-muted small text-center">
+      {{ $t('story.videoCaption') }}
+    </p>
     <p class="lead story-text">{{ $t('story.body2d') }}</p>
   </BContainer>
 </template>

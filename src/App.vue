@@ -65,7 +65,13 @@ const toggleMenu = () => {
     </BNavbarNav>
   </BNavbar>
 
-  <BNavbar sticky="top" toggleable="lg" class="mobile-navbar d-lg-none" variant="light" type="light">
+  <BNavbar
+    sticky="top"
+    toggleable="lg"
+    class="mobile-navbar d-lg-none"
+    variant="light"
+    type="light"
+  >
     <BNavbarToggle label="Toggle navigation" @click="toggleMenu">
       <IBiList style="font-size: 1.5rem" />
     </BNavbarToggle>

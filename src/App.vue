@@ -29,7 +29,7 @@ const toggleMenu = () => {
     <BNavbarNav class="d-flex flex-row align-items-center gap-4 flex-grow-1">
       <BNavItem
         href="#story"
-        class="fw-bold text-uppercase tracking-wide hover-highlight d-flex align-items-center gap-2"
+        class="rotate fw-bold text-uppercase tracking-wide hover-highlight d-flex align-items-center gap-2"
       >
         <ISolarWheelOutline class="nav-icon" /> {{ $t('getStarted') }}
       </BNavItem>
@@ -76,7 +76,7 @@ const toggleMenu = () => {
       <IBiList style="font-size: 1.5rem" />
     </BNavbarToggle>
     <BCollapse id="nav-offcanvas" is-nav v-model="isExpanded" class="mobile-nav-collapse">
-      <BNavbarNav class="flex-column p-3">
+      <BNavbarNav class="rotate flex-column p-3">
         <BNavItem
           href="#story"
           class="mb-2 d-flex align-items-center gap-2"
@@ -129,6 +129,21 @@ const toggleMenu = () => {
 </template>
 
 <style scoped>
+.rotate:hover .nav-icon {
+  -webkit-transform: rotate(180deg) !important;
+  -ms-transform: rotate(180deg) !important;
+  -o-transform: rotate(180deg) !important;
+  transform: rotate(180deg) !important;
+}
+
+.nav-item:hover .nav-icon {
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  transform: rotate(20deg);
+  transition: all 0.3s ease;
+}
+
 .floating-navbar {
   position: fixed;
   top: 0;

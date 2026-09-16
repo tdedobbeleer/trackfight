@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onBeforeRouteUpdate } from 'vue-router'
 import { BButton, BContainer } from 'bootstrap-vue-next'
 import StoryPage from '@/views/Story.vue'
 import PetitionsPage from '@/views/Petitions.vue'

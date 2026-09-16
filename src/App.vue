@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { ref } from 'vue'
+import { setLocalePreference } from '@/i18n'
 import { BButton } from 'bootstrap-vue-next'
 
 defineOptions({
@@ -13,6 +13,7 @@ const isExpanded = ref(false)
 
 const switchLanguage = (loc: string) => {
   locale.value = loc
+  setLocalePreference(loc)
 }
 
 const alternateLocale = computed(() => {

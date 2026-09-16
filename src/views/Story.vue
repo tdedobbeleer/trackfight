@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { BContainer, BImg } from 'bootstrap-vue-next'
+import { BContainer, BImg, BCol } from 'bootstrap-vue-next'
 
 defineOptions({
   name: 'StoryPage',
@@ -19,23 +19,18 @@ const showVideo = ref(false)
     <p class="lead story-text" v-html="$t('story.body1d')"></p>
     <p class="lead story-text">{{ $t('story.body1e') }}</p>
     <p class="lead story-text">{{ $t('story.body1f') }}</p>
-    <div class="story-image-wrapper mt-5">
+    <BCol md="12" class="story-image-wrapper mt-5">
       <BImg
+        placement="center"
+        fluid
+        rounded="circle"
         src="/img/annielambrechts.webp"
         alt="Annie Lambrechts with her father Jean and sister Josette from the 50th anniversary of Sint-Janscollege"
-        width="400"
-        height="400"
-        class="story-image rounded-circle border border-2"
-        style="
-          border-color: #e30713;
-          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-          max-height: 50vh;
-          object-fit: cover;
-        "
+        class="border border-2 story-img"
         loading="lazy"
       />
-      <p class="story-caption mt-3 text-muted small" v-html="$t('story.caption')"></p>
-    </div>
+      <p class="text-center mt-3 text-muted small" v-html="$t('story.caption')"></p>
+    </BCol>
     <p class="lead story-text">{{ $t('story.body2a') }}</p>
     <p class="lead story-text">{{ $t('story.body2b') }}</p>
     <p class="lead story-text">{{ $t('story.body2c') }}</p>
@@ -77,15 +72,10 @@ const showVideo = ref(false)
   max-width: 75ch;
 }
 
-.story-image-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.story-caption {
-  text-align: center;
-  max-width: 75ch;
+.story-img {
+  border-color: #e30713;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
 }
 
 .story-video-caption {

@@ -69,7 +69,6 @@ const showVideo = ref(false)
 .story-text {
   white-space: pre-line;
   line-height: 1.8;
-  max-width: 75ch;
 }
 
 .story-img {
@@ -80,7 +79,6 @@ const showVideo = ref(false)
 
 .story-video-caption {
   text-align: center;
-  max-width: 75ch;
   margin-left: auto;
   margin-right: auto;
 }

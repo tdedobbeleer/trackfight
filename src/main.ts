@@ -1,5 +1,6 @@
 import './assets/scss/custom-theme.scss'
 import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
+import './assets/scss/global-buttons.scss'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'

@@ -12,9 +12,9 @@ defineOptions({
     <p class="lead story-text">{{ $t('petitionText') }}</p>
     <div class="d-flex flex-column flex-md-row gap-3 align-items-stretch justify-content-center mt-5">
       <BButton
-        variant="outline-danger"
+        variant="primary"
         size="lg"
-        class="flex-fill w-100 w-md-auto text-dark petition-btn"
+        class="flex-fill w-100 w-md-auto text-dark"
         :href="$t('petitionUrl1')"
         target="_blank"
         rel="noopener"
@@ -22,9 +22,9 @@ defineOptions({
         {{ $t('petitionButton1') }}
       </BButton>
       <BButton
-        variant="outline-danger"
+        variant="secondary"
         size="lg"
-        class="flex-fill w-100 w-md-auto text-dark petition-btn"
+        class="flex-fill w-100 w-md-auto text-dark"
         :href="$t('petitionUrl2')"
         target="_blank"
         rel="noopener"
@@ -40,12 +40,5 @@ defineOptions({
   white-space: pre-line;
   line-height: 1.8;
   max-width: 75ch;
-}
-
-.petition-btn:hover,
-.petition-btn:focus,
-.petition-btn:active {
-  background-color: #ffffff;
-  border-color: #ffcc01;
 }
 </style>

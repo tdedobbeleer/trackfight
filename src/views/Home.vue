@@ -17,7 +17,18 @@ defineOptions({
       >
         <BContainer class="jumbotron-content" data-aos="zoom-in" data-aos-delay="200">
           <h1 class="display-3 fw-bold mb-4">{{ $t('welcome') }}</h1>
-          <BButton variant="primary" size="lg" href="#story">{{ $t('getStarted') }}</BButton>
+          <BRow class="mb-5">
+            <BCol>
+              <BButton variant="primary" size="lg" href="#story">{{ $t('getStarted') }}</BButton>
+            </BCol>
+          </BRow>
+          <BRow>
+            <BCol>
+              <BButton variant="secondary" size="lg" href="#petitions">{{
+                $t('toPetitions')
+              }}</BButton>
+            </BCol>
+          </BRow>
         </BContainer>
       </div>
     </BContainer>

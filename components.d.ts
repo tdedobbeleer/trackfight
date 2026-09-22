@@ -11,6 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BCol: typeof import('bootstrap-vue-next/components/BContainer')['BCol']
     BCollapse: typeof import('bootstrap-vue-next/components/BCollapse')['BCollapse']
     BDropdownItem: typeof import('bootstrap-vue-next/components/BDropdown')['BDropdownItem']
     BImg: typeof import('bootstrap-vue-next/components/BImg')['BImg']
@@ -19,6 +20,7 @@ declare module 'vue' {
     BNavbarNav: typeof import('bootstrap-vue-next/components/BNavbar')['BNavbarNav']
     BNavbarToggle: typeof import('bootstrap-vue-next/components/BNavbar')['BNavbarToggle']
     BNavItem: typeof import('bootstrap-vue-next/components/BNav')['BNavItem']
+    BRow: typeof import('bootstrap-vue-next/components/BContainer')['BRow']
     IBiEnvelope: typeof import('~icons/bi/envelope')['default']
     IBiGlobe: typeof import('~icons/bi/globe')['default']
     IBiList: typeof import('~icons/bi/list')['default']

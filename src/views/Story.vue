@@ -13,7 +13,7 @@ const showVideo = ref(false)
   <BContainer class="py-5">
     <h1 class="fw-bold mb-4">{{ $t('story.title') }}</h1>
     <p class="lead story-text fw-bold">{{ $t('story.salutation') }}</p>
-    <p class="lead story-text">{{ $t('story.body1a') }}</p>
+    <p class="lead story-text" v-html="$t('story.body1a')"></p>
     <p class="lead story-text">{{ $t('story.body1b') }}</p>
     <p class="lead story-text">{{ $t('story.body1c') }}</p>
     <p class="lead story-text" v-html="$t('story.body1d')"></p>

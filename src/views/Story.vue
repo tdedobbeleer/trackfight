@@ -17,8 +17,6 @@ const showVideo = ref(false)
     <p class="lead story-text">{{ $t('story.body1b') }}</p>
     <p class="lead story-text">{{ $t('story.body1c') }}</p>
     <p class="lead story-text" v-html="$t('story.body1d')"></p>
-    <p class="lead story-text">{{ $t('story.body1e') }}</p>
-    <p class="lead story-text">{{ $t('story.body1f') }}</p>
     <BCol md="12" class="story-image-wrapper mt-5">
       <BImg
         placement="center"
@@ -31,6 +29,8 @@ const showVideo = ref(false)
       />
       <p class="text-center mt-3 text-muted small" v-html="$t('story.caption')"></p>
     </BCol>
+    <p class="lead story-text">{{ $t('story.body1e') }}</p>
+    <p class="lead story-text">{{ $t('story.body1f') }}</p>
     <p class="lead story-text">{{ $t('story.body2a') }}</p>
     <p class="lead story-text">{{ $t('story.body2b') }}</p>
     <p class="lead story-text">{{ $t('story.body2c') }}</p>

@@ -23,7 +23,7 @@ const showVideo = ref(false)
         fluid
         rounded="circle"
         src="/img/annielambrechts.webp"
-        alt="Annie Lambrechts with her father Jean and sister Josette from the 50th anniversary of Sint-Janscollege"
+        alt="Annie Lambrechts met haar vader Jean en haar zus Josette"
         class="border border-2 story-img"
         loading="lazy"
       />
@@ -31,6 +31,7 @@ const showVideo = ref(false)
     </BCol>
     <p class="lead story-text">{{ $t('story.body1e') }}</p>
     <p class="lead story-text">{{ $t('story.body1f') }}</p>
+    <h2 class="fw-bold mb-4">{{ $t('story.subtitle') }}</h2>
     <p class="lead story-text">{{ $t('story.body2a') }}</p>
     <p class="lead story-text">{{ $t('story.body2b') }}</p>
     <p class="lead story-text">{{ $t('story.body2c') }}</p>

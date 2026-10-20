@@ -53,6 +53,7 @@ const toggleMenu = () => {
         <IBiTelephone class="nav-icon" /> {{ $t('contact') }}
       </BNavItem>
     </BNavbarNav>
+    <!--
     <BNavbarNav class="lang-nav-item ms-auto border-start border-2 ps-3">
       <BButton
         variant="link"
@@ -64,6 +65,7 @@ const toggleMenu = () => {
         <span class="fw-bold">{{ alternateLocale }}</span>
       </BButton>
     </BNavbarNav>
+  -->
   </BNavbar>
 
   <BNavbar
@@ -106,6 +108,7 @@ const toggleMenu = () => {
         >
           <IBiTelephone class="nav-icon" /> {{ $t('contact') }}
         </BNavItem>
+        <!--
         <BNavItem class="mb-2">
           <IBiGlobe class="me-2" />
           <span class="fw-bold">Languages</span>
@@ -120,6 +123,7 @@ const toggleMenu = () => {
         >
           {{ loc.toUpperCase() }}
         </BDropdownItem>
+      -->
       </BNavbarNav>
     </BCollapse>
   </BNavbar>

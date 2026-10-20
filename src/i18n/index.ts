@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n'
-import en from './locales/en.json'
+//import en from './locales/en.json'
 import nl from './locales/nl.json'
 
 export const localeStorageKey = 'trackfight-locale'
@@ -27,8 +27,7 @@ export const setLocalePreference = (loc: string) => {
 
   try {
     window.localStorage.setItem(localeStorageKey, loc)
-  } catch {
-  }
+  } catch {}
 }
 
 export const i18n = createI18n({
@@ -36,7 +35,7 @@ export const i18n = createI18n({
   locale: getStoredLocale(),
   fallbackLocale: 'nl',
   messages: {
-    en,
+    //en,
     nl,
   },
 })
